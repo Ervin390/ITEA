@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sušić Design - Premium Ručno Izrađeni Pokloni</title>
+    <meta name="description" content="Premium hrvatski gift shop s ručno izrađenim i personaliziranim poklonima. Elegantni dizajn, vrhunska kvaliteta i osobni pristup.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'premium-gold': '#D4AF37',
+                        'premium-burgundy': '#800020',
+                        'premium-cream': '#F5F1E8',
+                        'premium-charcoal': '#2C3E50',
+                        'premium-sage': '#8A9A5B'
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif']
+                    },
+                    spacing: {
+                        '128': '32rem',
+                        '144': '36rem'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #F5F1E8 0%, #FFFFFF 50%, #F5F1E8 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .gold-border {
+            border: 1px solid #D4AF37;
+        }
+        .section-divider {
+            border-top: 1px solid #E5E7EB;
+            margin: 4rem 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-premium-cream font-sans text-premium-charcoal">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo placeholder -->
+                <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <div class="w-12 h-12 bg-premium-gold rounded-full flex items-center justify-center">
+                        <span class="text-white font-serif font-bold text-xl">SD</span>
+                    </div>
+                    <div>
+                        <h1 class="font-serif text-2xl font-bold text-premium-charcoal">Sušić Design</h1>
+                        <p class="text-sm text-gray-600">Premium ručno izrađeni pokloni</p>
+                    </div>
+                </div>
+
+                <!-- Social media icons -->
+                <div class="flex space-x-4 mb-4 md:mb-0">
+                    <a href="https://www.instagram.com/vjecnisanjar_pokloni" class="text-premium-charcoal hover:text-premium-gold transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1Cf3LpAQ8A/" class="text-premium-charcoal hover:text-premium-gold transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="w-full md:w-auto">
+                    <ul id="nav-list" class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8"></ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-gradient py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-premium-charcoal mb-6">
+                    Ručno Izrađeni Pokloni <span class="text-premium-gold">Premium Kvalitete</span>
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+                    Svaki poklon je jedinstveno umjetničko djelo, pažljivo izrađeno s ljubavlju i posvećenošću. 
+                    Personalizacija koja ostavlja bez daha.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#portfolio" class="bg-premium-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition-colors">
+                        Pogledajte Galeriju
+                    </a>
+                    <a href="#contact" class="bg-white text-premium-charcoal px-8 py-3 rounded-full font-semibold border-2 border-premium-gold hover:bg-premium-cream transition-colors">
+                        Naručite Poklon
+                    </a>
+                </div>
+                <p class="mt-8 text-gray-600 italic">
+                    * Svaki poklon se izrađuje ručno i personalizirano prema Vašim željama
+                </p>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery -->
+        <section id="portfolio" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-center text-premium-charcoal mb-12">
+                    Naša Galerija
+                </h2>
+                <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="usluge" class="py-16 bg-premium-cream">
+            <div class="container mx-auto px-4">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-center text-premium-charcoal mb-12">
+                    Naše Usluge
+                </h2>
+                <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-center text-premium-charcoal mb-12">
+                    Blog & Inspiracije
+                </h2>
+                <div id="blog-posts" class="space-y-12 max-w-4xl mx-auto">
+                    <!-- Blog posts will be loaded dynamically from Google Sheets -->
+                    <div class="text-center py-12">
+                        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-premium-gold mx-auto"></div>
+                        <p class="mt-4 text-gray-600">Učitavam blog postove...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact" class="py-16 bg-premium-cream">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-center text-premium-charcoal mb-12">
+                        Kontaktirajte Nas
+                    </h2>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 gold-border">
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Ime i Prezime *</label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-premium-gold focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Ime tvrtke</label>
+                                    <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-premium-gold focus:border-transparent">
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email adresa *</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-premium-gold focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Broj telefona *</label>
+                                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-premium-gold focus:border-transparent">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="delivery-date" class="block text-sm font-medium text-gray-700 mb-2">Očekivani datum isporuke *</label>
+                                <input type="date" id="delivery-date" name="delivery-date" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-premium-gold focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Poruka *</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-premium-gold focus:border-transparent" placeholder="Opišite Vaš poklon, želje za personalizacijom, bilješke..."></textarea>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="bg-premium-gold text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-yellow-600 transition-colors">
+                                    Pošaljite upit
+                                </button>
+                                <p class="mt-4 text-sm text-gray-600">* Obavezno polje. Odgovorimo u roku od 24 sata.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-premium-charcoal text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">Sušić Design</h3>
+                    <p class="text-gray-300 mb-4">
+                        ITEA obrt za proizvodnju, usluge i trgovinu<br>
+                        vl. Lea Sušić<br>
+                        Ul. Vrba 15, Zagreb<br>
+                        itea.pokloni@gmail.com
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/vjecnisanjar_pokloni" class="text-gray-300 hover:text-premium-gold transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1Cf3LpAQ8A/" class="text-gray-300 hover:text-premium-gold transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">Brzi linkovi</h3>
+                    <ul id="footer-links" class="space-y-2"></ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">Pravne informacije</h3>
+                    <ul id="legal-links" class="space-y-2"></ul>
+                    <p class="mt-6 text-sm text-gray-400">
+                        Svaki poklon se izrađuje ručno i personalizirano.<br>
+                        Vrijeme izrade ovisi o složenosti narudžbe.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="section-divider border-gray-700 mt-8"></div>
+            
+            <div class="text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Sušić Design. Sva prava pridržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================
+        // DATA LAYER - Centralized content management
+        // ============================================
+
+        // Navigation items data
+        const navigationItems = [
+            { "label": "Početna", "href": "#home" },
+            { "label": "Usluge", "href": "#usluge" },
+            { "label": "Portfolio", "href": "#portfolio" },
+            { "label": "Blog", "href": "#blog" },
+            { "label": "Kontakt", "href": "#contact" }
+        ];
+
+        // Gallery items data
+        const galleryItems = [
+            { 
+                "title": "Personalizirani Drveni Kutak", 
+                "description": "Ručno izrezbaren drveni kutak s personaliziranim gravurom",
+                "image": "https://picsum.photos/400/300?random=1",
+                "alt": "Personalizirani drveni kutak s gravurom"
+            },
+            { 
+                "title": "Premium Kožna Torbica", 
+                "description": "Ručno šivana kožna torbica s detaljima od 24k zlata",
+                "image": "https://picsum.photos/400/300?random=2",
+                "alt": "Premium kožna torbica s zlatnim detaljima"
+            },
+            { 
+                "title": "Kristalna Vaza", 
+                "description": "Ručno brušena kristalna vaza s unikatnim dizajnom",
+                "image": "https://picsum.photos/400/300?random=3",
+                "alt": "Kristalna vaza s ručnim brušenjem"
+            },
+            { 
+                "title": "Srebrni Nakit", 
+                "description": "Ručno izrađen srebrni nakit s poludragim kamenjem",
+                "image": "https://picsum.photos/400/300?random=4",
+                "alt": "Srebrni nakit s poludragim kamenjem"
+            },
+            { 
+                "title": "Personalizirana Slika", 
+                "description": "Ručno slikana akrilna slika prema željama kupca",
+                "image": "https://picsum.photos/400/300?random=5",
+                "alt": "Ručno slikana personalizirana slika"
+            },
+            { 
+                "title": "Luksuzna Kutija", 
+                "description": "Ručno izrađena kutija od mahagonija s satenskom oblogom",
+                "image": "https://picsum.photos/400/300?random=6",
+                "alt": "Luksuzna drvena kutija s satenskom oblogom"
+            }
+        ];
+
+        // Services data
+        const services = [
+            {
+                "title": "Personalizacija Poklona",
+                "description": "Svaki poklon prilagođavamo Vašim željama - gravura, monogrami, posebni natpisi.",
+                "icon": "fas fa-user-edit"
+            },
+            {
+                "title": "Ručna Izrada",
+                "description": "Svi proizvodi su ručno izrađeni s pažnjom na svaki detalj i vrhunskom kvalitetom.",
+                "icon": "fas fa-hands"
+            },
+            {
+                "title": "Premium Materijali",
+                "description": "Koristimo samo najkvalitetnije materijale - puno drvo, prava koža, kristal, srebro.",
+                "icon": "fas fa-gem"
+            },
+            {
+                "title": "Dizajn po Narudžbi",
+                "description": "Kreiramo potpuno nove dizajne prema Vašim idejama i potrebama.",
+                "icon": "fas fa-pencil-ruler"
+            },
+            {
+                "title": "Brza Isporuka",
+                "description": "Isporuka unutar Hrvatske u roku od 3-5 radnih dana. Hitne narudžbe moguće.",
+                "icon": "fas fa-shipping-fast"
+            },
+            {
+                "title": "Poklon Uvijanje",
+                "description": "Besplatno premium poklon uvijanje s personaliziranom čestitkom.",
+                "icon": "fas fa-gift"
+            }
+        ];
+
+        // Footer links data
+        const footerLinks = [
+            { "label": "Početna", "href": "#home" },
+            { "label": "Usluge", "href": "#usluge" },
+            { "label": "Portfolio", "href": "#portfolio" },
+            { "label": "Blog", "href": "#blog" },
+            { "label": "Kontakt", "href": "#contact" }
+        ];
+
+        // Legal links data
+        const legalLinks = [
+            { "label": "Uvjeti korištenja", "href": "https://share.google/gEyfVBKxFot0wSvnC" },
+            { "label": "Pravila privatnosti", "href": "https://share.google/gEyfVBKxFot0wSvnC" },
+            { "label": "Pravila povrata", "href": "https://share.google/gEyfVBKxFot0wSvnC" }
+        ];
+
+        // ============================================
+        // RENDER FUNCTIONS - Reusable template generators
+        // ============================================
+
+        /**
+         * Renders navigation items from data array
+         * @param {Array} items - Navigation items data
+         * @returns {string} HTML string of navigation items
+         */
+        function renderNavItems(items) {
+            return items.map(item => 
+                `<li>
+                    <a href="${item.href}" 
+                       class="text-premium-charcoal hover:text-premium-gold font-medium transition-colors"
+                       data-nav-link>
+                        ${item.label}
+                    </a>
+                </li>`
+            ).join("");
+        }
+
+        /**
+         * Renders gallery items from data array
+         * @param {Array} items - Gallery items data
+         * @returns {string} HTML string of gallery items
+         */
+        function renderGalleryItems(items) {
+            return items.map(item => 
+                `<div class="card-hover bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="${item.image}" 
+                         alt="${item.alt}" 
+                         class="w-full h-64 object-cover"
+                         loading="lazy">
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-premium-charcoal mb-2">
+                            ${item.title}
+                        </h3>
+                        <p class="text-gray-600">
+                            ${item.description}
+                        </p>
+                    </div>
+                </div>`
+            ).join("");
+        }
+
+        /**
+         * Renders service items from data array
+         * @param {Array} items - Service items data
+         * @returns {string} HTML string of service items
+         */
+        function renderServiceItems(items) {
+            return items.map(item => 
+                `<div class="card-hover bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-premium-gold text-3xl mb-4">
+                        <i class="${item.icon}"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-premium-charcoal mb-3">
+                        ${item.title}
+                    </h3>
+                    <p class="text-gray-600">
+                        ${item.description}
+                    </p>
+                </div>`
+            ).join("");
+        }
+
+        /**
+         * Renders footer links from data array
+         * @param {Array} items - Footer links data
+         * @returns {string} HTML string of footer links
+         */
+        function renderFooterLinks(items) {
+            return items.map(item => 
+                `<li>
+                    <a href="${item.href}" 
+                       class="text-gray-300 hover:text-premium-gold transition-colors"
+                       data-footer-link>
+                        ${item.label}
+                    </a>
+                </li>`
+            ).join("");
+        }
+
+        /**
+         * Renders legal links from data array
+         * @param {Array} items - Legal links data
+         * @returns {string} HTML string of legal links
+         */
+        function renderLegalLinks(items) {
+            return items.map(item => 
+                `<li>
+                    <a href="${item.href}" 
+                       target="_blank"
+                       class="text-gray-300 hover:text-premium-gold transition-colors">
+                        ${item.label}
+                    </a>
+                </li>`
+            ).join("");
+        }
+
+        /**
+         * Renders a blog post from data object
+         * @param {Object} post - Blog post data
+         * @returns {string} HTML string of blog post
+         */
+        function renderBlogPost(post) {
+    const images = (post.linkoviSlika || "")
+        .split(",")
+        .map(url => url.trim())
+        .filter(Boolean);
+
+    return `
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-premium-gold font-semibold">
+                        ${post.datum ? formatDate(post.datum) : 'Nedavno'}
+                    </span>
+                    <span class="bg-premium-sage text-white px-3 py-1 rounded-full text-sm">Objavljeno</span>
+                </div>
+
+                <h3 class="font-serif text-2xl font-bold text-premium-charcoal mb-3">
+                    ${post.naslov || ''}
+                </h3>
+
+                <h4 class="text-xl text-premium-burgundy mb-4">
+                    ${post.podnaslov || ''}
+                </h4>
+
+                <div class="prose max-w-none text-gray-700 mb-6 whitespace-pre-line">
+                    ${post.text || ''}
+                </div>
+
+                ${
+                    images.length > 0
+                        ? `
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            ${images.map((img, index) => `
+                                <img 
+                                    src="${img}" 
+                                    alt="Slika ${index + 1} za ${post.naslov || 'blog post'}" 
+                                    class="rounded-lg w-full h-64 object-cover" 
+                                    loading="lazy"
+                                >
+                            `).join("")}
+                        </div>
+                        `
+                        : ''
+                }
+            </div>
+        </article>
+    `;
+}
+        // ============================================
+        // INITIALIZATION - DOM content rendering
+        // ============================================
+
+        // Render all content on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Render navigation
+            document.getElementById('nav-list').innerHTML = renderNavItems(navigationItems);
+            
+            // Render gallery
+            document.getElementById('gallery-grid').innerHTML = renderGalleryItems(galleryItems);
+            
+            // Render services
+            document.getElementById('services-grid').innerHTML = renderServiceItems(services);
+            
+            // Render footer links
+            document.getElementById('footer-links').innerHTML = renderFooterLinks(footerLinks);
+            
+            // Render legal links
+            document.getElementById('legal-links').innerHTML = renderLegalLinks(legalLinks);
+            
+            // Load blog posts from Google Sheets
+            loadBlogPosts();
+            
+            // Initialize event listeners
+            initializeEventListeners();
+        });
+
+        // ============================================
+        // BLOG POSTS LOADING - Google Sheets integration
+        // ============================================
+
+        /**
+         * Loads blog posts from Google Sheets via Apps Script
+         */
+    async function loadBlogPosts() {
+    const blogContainer = document.getElementById('blog-posts');
+    const apiUrl = 'https://script.google.com/macros/s/AKfycbyw_52t_2ExRpxq1iYMxWJD9gDDRCnZWiWjF9ezE5brQPp4kWK3VSE1Oj5x7aQi1qUfyw/exec';
+
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        // Apps Script vraća direktno array postova
+        if (Array.isArray(data) && data.length > 0) {
+            blogContainer.innerHTML = data.map(post => renderBlogPost(post)).join("");
+        } else {
+            blogContainer.innerHTML = `
+                <div class="text-center py-12">
+                    <p class="text-gray-600">Trenutno nema objavljenih blog postova.</p>
+                </div>
+            `;
+        }
+    } catch (error) {
+        console.error('Error loading blog posts:', error);
+        blogContainer.innerHTML = `
+            <div class="text-center py-12">
+                <p class="text-red-600">Greška pri učitavanju blog postova.</p>
+                <p class="text-gray-600 text-sm mt-2">Molimo pokušajte kasnije.</p>
+            </div>
+        `;
+    }
+}
+
+        // ============================================
+        // EVENT HANDLING - Delegated event management
+        // ============================================
+
+        /**
+         * Initializes all event listeners
+         */
+        function initializeEventListeners() {
+            // Smooth scrolling for all anchor links
+            document.addEventListener('click', function(event) {
+                const link = event.target.closest('a[href^="#"]');
+                if (!link) return;
+                
+                event.preventDefault();
+                const targetId = link.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+
+            // Contact form submission
+           const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const requiredFields = contactForm.querySelectorAll('[required]');
+        let isValid = true;
+
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.classList.add('border-red-500');
+            } else {
+                field.classList.remove('border-red-500');
+            }
+        });
+
+        if (!isValid) {
+            alert('Molimo ispunite sva obavezna polja.');
+            return;
+        }
+
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+
+        submitButton.textContent = 'Šaljem...';
+        submitButton.disabled = true;
+
+        const payload = {
+  imePrezime: document.getElementById('name').value.trim(),
+  imeTvrtke: document.getElementById('company').value.trim(),
+  brojTelefona: document.getElementById('phone').value.trim(),
+  email: document.getElementById('email').value.trim(),
+  ocekivaniDatumIsporuke: document.getElementById('delivery-date').value,
+  poruka: document.getElementById('message').value.trim()
+};
+
+        try {
+            await fetch('https://script.google.com/macros/s/AKfycbwppRsKYZ9B_FJr4ZH3AwmgCmUX2cWPNgju7XUvTjrZ5P16EkSmrq0q4xZSjnX4VjdU2A/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            alert('Hvala! Vaš upit je poslan.');
+            contactForm.reset();
+        } catch (error) {
+            console.error('Greška pri slanju forme:', error);
+            alert('Došlo je do greške pri slanju forme.');
+        } finally {
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }
+    });
+}
+            // Form field validation styling
+            const formInputs = document.querySelectorAll('#contact-form input, #contact-form textarea');
+            formInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    if (this.value.trim()) {
+                        this.classList.remove('border-red-500');
+                    }
+                });
+                
+                input.addEventListener('blur', function() {
+                    if (this.hasAttribute('required') && !this.value.trim()) {
+                        this.classList.add('border-red-500');
+                    }
+                });
+            });
+        }
+
+        // ============================================
+        // UTILITY FUNCTIONS - Helper functions
+        // ============================================
+
+        /**
+         * Formats date to Croatian locale
+         * @param {string} dateString - Date string to format
+         * @returns {string} Formatted date
+         */
+        function formatDate(dateString) {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) return dateString;
+
+    return date.toLocaleDateString('hr-HR', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+
+        /**
+         * Debounce function for performance optimization
+         * @param {Function} func - Function to debounce
+         * @param {number} wait - Wait time in milliseconds
+         * @returns {Function} Debounced function
+         */
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // ============================================
+        // RESPONSIVE BEHAVIOR - Window resize handling
+        // ============================================
+
+        // Debounced resize handler for performance
+        window.addEventListener('resize', debounce(function() {
+            // Add any responsive behavior adjustments here
+            console.log('Window resized - responsive adjustments applied');
+        }, 250));
+    </script>
+</body>
+</html>
